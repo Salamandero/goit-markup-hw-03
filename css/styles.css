@@ -225,6 +225,22 @@ footer {
 .filters-btn:focus {
   color: var(--white-text-color);
 }
-.projects-link {
+.project-list {
+  list-style-type: none;
+}
+.projects .projects-link {
   text-decoration: none;
+}
+.projects-title {
+  color: var(--primary-text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.projects-text {
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
 }
