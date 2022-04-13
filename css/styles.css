@@ -51,9 +51,12 @@ img {
   /* outline: 2px solid red; */
 }
 .section{
+  padding-top: 94px;
   padding-bottom: 94px;
 }
-
+.no-padding{
+  padding-bottom: 0;
+}
 .nav-item > .current {
   color: var(--accent-color);
 }
@@ -84,7 +87,7 @@ img {
 .nav-list {
   display: flex;
 }
-.nav-list .item:not(:last-child) {
+.nav-list > .item:not(:last-child) {
 margin-right: 50px;
 }
 /* .nav-list .nav-item + .nav-item{
@@ -128,7 +131,7 @@ margin-right: 50px;
 
   text-decoration: none;
   }
-  .header-contacts .item:not(:last-child){
+  .header-contacts > .item:not(:last-child){
     margin-right: 50px;
   }
 .header-mail,
@@ -150,10 +153,10 @@ margin-right: 50px;
   text-align: center;
 }
 .hero-title {
-margin-bottom: 30px;
-margin-left: auto;
-margin-right: auto;
-max-width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
 
   font-weight: 900;
   font-size: 44px;
@@ -241,7 +244,6 @@ margin-right: 30px;
   background: #f5f4fa;
 }
 .team-title {
-  padding-top: 94px;
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -258,7 +260,7 @@ margin-right: 30px;
   }
 .team-item{
     max-width: 270px;
-    background: #FFFFFF;
+    background: var(--white-text-color);
     /* material shadow v1 */
     
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -269,7 +271,7 @@ margin-right: 30px;
 .team-item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
-.team-item img{
+.team-item > img{
   margin-bottom: 30px;
 }
 .team-pretext {
@@ -344,16 +346,17 @@ margin-bottom: 20px;
 /*-------------- PORTFOLIO.html ------------*/
 /*-------------- Projects ------------*/
 .filters-btn {
+  padding: 6px 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--primary-text-color);
   background: #f5f4fa;
   border-radius: 4px;
-  cursor: pointer;
   font-family: inherit;
   border: none;
 }
@@ -365,17 +368,30 @@ margin-bottom: 20px;
 .filters-btn:focus {
   color: var(--white-text-color);
 }
+.filters-list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filters-list > .filters-item:not(:last-child){
+  margin-right: 8px;
+}
+
 
 .projects-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.projects-list .item {
+.projects-list > .item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
-}
+  margin-bottom: 30px;
+ 
+  background: var(--white-text-color);
+  border: 1px solid #EEEEEE;
 
+}
 
 /* 
 .projects-list .item{
@@ -384,12 +400,13 @@ margin-bottom: 20px;
   margin-bottom: 30px;
 }*/
 
-.projects-list .item:nth-child(3n){
+.projects-list > .item:nth-child(3n){
   margin-right: 0;
 }
-/* .projects-list .item:nth-last-child(-n+3){
+ 
+.projects-list .item:nth-last-child(-n+3){
   margin-bottom: 0;
-} */
+}
 
 /* Альтернатива */
 /* 
@@ -401,8 +418,9 @@ margin-bottom: 30px;
 } */
 
 
-.projects .projects-link {
-  text-decoration: none;
+
+.object > h3{
+  margin-bottom: 4px;
 }
 .projects-title {
   color: var(--primary-text-color);
@@ -416,4 +434,9 @@ margin-bottom: 30px;
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--text-color);
+}
+.object {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+border-top: none;
 }
